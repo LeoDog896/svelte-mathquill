@@ -9,8 +9,8 @@
 <div class="m-8">
   <MathQuill config={({ autoCommands, autoOperatorNames })} bind:latex={latex}/><br/>
 
-  <input placeholder="Auto Commands" bind:value={autoCommands}><br/>
-  <input placeholder="Auto Operator Names" bind:value={autoOperatorNames}><br/>
+  Auto Commands: <input placeholder="Auto Commands" bind:value={autoCommands}><br/>
+  Auto Operator Names: <input placeholder="Auto Operator Names" bind:value={autoOperatorNames}><br/>
   <br/>
-  <input bind:value={latex}/>
+  <input placeholder="Result (editable) Latex" bind:value={latex}/>
 </div>
