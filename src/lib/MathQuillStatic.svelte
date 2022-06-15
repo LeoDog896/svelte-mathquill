@@ -1,13 +1,28 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
 
   let span: HTMLSpanElement
+  let MQ: any;
+  let field: any | undefined;
+  let latex = "";
 
   onMount(() => {
-    const MQ = (globalThis as any).MathQuill.getInterface(2);
+    MQ = (globalThis as any).MathQuill.getInterface(2);
 
-    MQ.StaticMath(span);
+    if (latex) refresh()
   })
+
+  $: if (latex !== undefined) tick().then(refresh)
+
+  function refresh() {
+    if (latex == "") {
+      field?.revert();
+      return
+    }
+    
+    if (field) field.revert()
+    field = MQ?.StaticMath(span);
+  }
 </script>
 
-<span bind:this={span}><slot/></span>
+<span bind:this={span}>{latex}</span>

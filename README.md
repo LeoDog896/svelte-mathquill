@@ -34,4 +34,4 @@ Simple example:
 <input bind:value={latex}/>
 ```
 
-```
+## Documetation
