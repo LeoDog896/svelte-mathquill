@@ -1,6 +1,6 @@
 {
 	"name": "svelte-mathquill",
-  "description": "A svelte wrapper for MathQuill",
+	"description": "A svelte wrapper for MathQuill",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
@@ -16,7 +16,6 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.22.2",
-		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.34",
 		"@sveltejs/kit": "next",
 		"@types/jquery": "^3.5.14",
@@ -26,7 +25,6 @@
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"mathquill": "^0.10.1-a",
 		"postcss": "^8.4.12",
 		"postcss-load-config": "^3.1.4",
 		"prettier": "^2.6.2",
@@ -39,5 +37,8 @@
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"mathquill": "^0.10.1-a"
+	}
 }

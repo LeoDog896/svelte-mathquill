@@ -25,6 +25,8 @@
 
   let spanElement: HTMLSpanElement;
   export let latex: string;
+  /** If the element shouldn't have a border / outline. Useful if you're wrapping this input. */
+  export let noBorderOutline = false;
   let clazz = "";
 
   export { clazz as class }
@@ -70,4 +72,4 @@
   })
 </script>
 
-<span class={clazz} bind:this={spanElement}></span>
+<span class={clazz} style="{noBorderOutline ? "border: none; outline: none; box-shadow: none;" : ""}" bind:this={spanElement}></span>

@@ -4,7 +4,7 @@
   let span: HTMLSpanElement
   let MQ: any;
   let field: any | undefined;
-  let latex = "";
+  export let latex = "";
 
   onMount(() => {
     MQ = (globalThis as any).MathQuill.getInterface(2);

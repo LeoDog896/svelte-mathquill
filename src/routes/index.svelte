@@ -4,6 +4,7 @@
   let latex = "x + \\sqrt{5}"
   let autoCommands = "pi theta sqrt sum"
   let autoOperatorNames = "sin cos tan arcsin arccos arctan"
+  let noBorderOutline = false;
 </script>
 
 <div class="m-8 w-full h-min">
@@ -12,10 +13,11 @@
 
   <p class="mb-4"><span class="rounded-lg font-mono bg-gray-200 p-2">npm i -D svelte-mathquill</span></p>
 
-  <MathQuill config={({ autoCommands, autoOperatorNames })} bind:latex={latex}/><br/>
+  <MathQuill config={({ autoCommands, autoOperatorNames })} {noBorderOutline} bind:latex={latex}/><br/>
 
   Auto Commands: <input placeholder="Auto Commands" bind:value={autoCommands}><br/>
   Auto Operator Names: <input placeholder="Auto Operator Names" bind:value={autoOperatorNames}><br/>
+  No outline / border: <input type="checkbox" bind:checked={noBorderOutline}>
   <br/>
   Static: <MathQuillStatic {latex}></MathQuillStatic>
   Latex: <input placeholder="Result (editable) Latex" bind:value={latex}/>

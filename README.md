@@ -12,7 +12,7 @@ Add this to your `__layout.svelte` or any wrapper file where you use MathQuill:
 
 ```html
 <script>
-  import { MathQuillWrap } from 'svelte-mathquill';
+  import { MathQuillSetup } from 'svelte-mathquill';
 </script>
 
 <MathQuillSetup/>
