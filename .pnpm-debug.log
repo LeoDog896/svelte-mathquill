@@ -1,0 +1,41 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {},
+    "prefix": "/workspace/.pnpm-store/v3/tmp/dlx-1094"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/workspace/.pnpm-store/v3",
+    "virtualStoreDir": "/workspace/.pnpm-store/v3/tmp/dlx-1094/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/workspace/.pnpm-store/v3/tmp/dlx-1094",
+    "stage": "resolution_started"
+  },
+  "4 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "--version is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
+    "request": {
+      "url": "https://registry.npmjs.org/--version"
+    },
+    "response": {
+      "size": 0
+    },
+    "pkgName": "--version",
+    "spec": {
+      "fetchSpec": "latest",
+      "name": "--version",
+      "type": "tag"
+    },
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "GET https://registry.npmjs.org/--version: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "pnpm: GET https://registry.npmjs.org/--version: Not Found - 404\n    at RetryOperation._fn (/home/gitpod/.nvm/versions/node/v16.15.1/lib/node_modules/pnpm/dist/pnpx.cjs:79483:19)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    }
+  }
+}
