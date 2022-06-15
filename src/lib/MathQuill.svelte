@@ -8,9 +8,15 @@
 
   let spanElement: HTMLSpanElement;
   export let latex: string;
-  export let classInfo: string;
+  let clazz: string;
+
+  export { clazz as class }
+
   export let config: Partial<MathQuillConfig> = {}
-  let mathField: any;
+  let mathField: any | undefined;
+
+  export const focus = () => mathField?.focus()
+  export const blur = () => mathField?.blur()
 
   $: processedConfig = Object.entries(config).filter(([_, value]) => value)
 
@@ -32,4 +38,4 @@
   })
 </script>
 
-<span bind:this={spanElement}>x</span>
+<span class={clazz} bind:this={spanElement}>x</span>
