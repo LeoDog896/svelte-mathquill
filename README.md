@@ -2,6 +2,8 @@
 
 A wrapper around MathQuill, a very intuitive math typing editor
 
+`npm i -D svelte-mathquill`
+
 ## Usage
 
 MathQuill is legacy, so using it can be tricky -- this library solves *some* issues but not all:
