@@ -40,7 +40,7 @@
   export const keystroke = (text: string) => mathField?.keystroke(text)
   export const typedText = (text: string) => mathField?.typedText(text)
 
-  $: processedConfig = Object.entries(config).filter(([_, value]) => value)
+  $: processedConfig = Object.fromEntries(Object.entries(config).filter(([_, value]) => value))
 
   $: if (mathField && mathField.latex() !== latex) mathField.latex(latex)
   $: if (processedConfig && mathField) mathField.config(config)
