@@ -2,12 +2,22 @@
   import { onMount } from "svelte"
   import { createEventDispatcher } from 'svelte';
 
+  type HorizontalDirection = "L" | "R"
+
+  type VerticalDirection = "U" | "D";
+
+  type Direction = HorizontalDirection | VerticalDirection
+
   interface Events {
     edit: string;
+    moveOutOf: HorizontalDirection;
+    deleteOutOf: HorizontalDirection;
+    selectOutOf: HorizontalDirection;
     upOutOf: void;
-    moveOutOf: void;
+    downOutOf: void;
+    outOfOnly: Direction;
+    outOf: Direction;
     enter: void;
-    delete: void;
   }
 
 	const dispatch = createEventDispatcher<Events>();
@@ -54,6 +64,8 @@
 
     const MQ = ((globalThis as any).MathQuill as any).getInterface(2);
 
+    const parseDirection = (dir: any): HorizontalDirection => dir == MQ.L ? "L" : "R"
+
     mathField = MQ.MathField(spanElement, {
       ...processedConfig,
       substituteTextarea() {
@@ -65,21 +77,34 @@
       },
       handlers: {
         edit() {
-          
-          if (latex == "" && mathField.latex() == "") dispatch("delete");
-
           dispatch("edit", mathField.latex())
           latex = mathField.latex();
         },
         upOutOf() {
           dispatch("upOutOf")
+          dispatch("outOf", "U")
+          dispatch("outOfOnly", "U")
         },
-        moveOutOf() {
-          dispatch("moveOutOf")
+        downOutOf() {
+          dispatch("downOutOf")
+          dispatch("outOf", "D")
+          dispatch("outOfOnly", "D")
         },
-        enter() {
-          dispatch("enter")
-        }
+        moveOutOf(direction: any) {
+          dispatch("moveOutOf", parseDirection(direction))
+          dispatch("outOf", parseDirection(direction))
+          dispatch("outOfOnly", parseDirection(direction))
+        },
+        selectOutOf(direction: any) {
+          dispatch("selectOutOf", parseDirection(direction))
+          dispatch("outOf", parseDirection(direction))
+          dispatch("outOfOnly", parseDirection(direction))
+        },
+        deleteOutOf(direction: any) {
+          dispatch("deleteOutOf", parseDirection(direction))
+          dispatch("outOf", parseDirection(direction))
+        },
+        enter() { dispatch("enter") }
       }
     });
 
