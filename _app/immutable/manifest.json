@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-b93e9d30.js",
+    "file": "start-97be0f04.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -35,30 +35,30 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-1a2472f8.js",
+    "file": "pages/index.svelte-7b0d13cc.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-11b9fab4.js",
-      "_MathQuill-2e3134e9.js"
+      "_MathQuill-755feaf1.js"
     ]
   },
   "src/routes/list.svelte": {
-    "file": "pages/list.svelte-c1f15933.js",
+    "file": "pages/list.svelte-82eabb98.js",
     "src": "src/routes/list.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-11b9fab4.js",
-      "_MathQuill-2e3134e9.js"
+      "_MathQuill-755feaf1.js"
     ]
   },
   "_index-11b9fab4.js": {
     "file": "chunks/index-11b9fab4.js"
   },
-  "_MathQuill-2e3134e9.js": {
-    "file": "chunks/MathQuill-2e3134e9.js",
+  "_MathQuill-755feaf1.js": {
+    "file": "chunks/MathQuill-755feaf1.js",
     "imports": [
       "_index-11b9fab4.js"
     ]
