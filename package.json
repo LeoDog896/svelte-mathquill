@@ -2,6 +2,17 @@
 	"name": "svelte-mathquill",
 	"description": "A svelte wrapper for MathQuill",
 	"version": "0.4.0",
+	"author": {
+		"name": "Tristan F.",
+		"email": "leodog896@gmail.com"
+	},
+	"repository": "github:LeoDog896/mathquill",
+	"homepage": "https://leodog896.github.io/svelte-mathquill",
+	"bugs": {
+		"url": "https://github.com/LeoDog896/svelte-mathquill/issues",
+		"email": "leodog896@gmail.com"
+	},
+	"license": "MIT",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -25,6 +36,7 @@
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"mathquill": "^0.10.1-a",
 		"postcss": "^8.4.12",
 		"postcss-load-config": "^3.1.4",
 		"prettier": "^2.6.2",
@@ -37,8 +49,5 @@
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.3"
 	},
-	"type": "module",
-	"dependencies": {
-		"mathquill": "^0.10.1-a"
-	}
+	"type": "module"
 }
