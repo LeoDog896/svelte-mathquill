@@ -7,6 +7,7 @@
     upOutOf: void;
     moveOutOf: void;
     enter: void;
+    delete: void;
   }
 
 	const dispatch = createEventDispatcher<Events>();
@@ -24,6 +25,7 @@
   }
 
   let spanElement: HTMLSpanElement;
+  export let autofocus = false;
   export let latex: string;
   /** If the element shouldn't have a border / outline. Useful if you're wrapping this input. */
   export let noBorderOutline = false;
@@ -55,6 +57,9 @@
       ...processedConfig,
       handlers: {
         edit() {
+          
+          if (latex == "" && mathField.latex() == "") dispatch("delete");
+
           dispatch("edit", mathField.latex())
           latex = mathField.latex();
         },
@@ -69,6 +74,8 @@
         }
       }
     });
+
+    if (autofocus) mathField.focus()
   })
 </script>
 
