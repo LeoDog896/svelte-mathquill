@@ -1,7 +1,7 @@
 {
 	"name": "svelte-mathquill",
 	"description": "A svelte wrapper for MathQuill",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
