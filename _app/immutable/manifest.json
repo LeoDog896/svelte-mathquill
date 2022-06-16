@@ -1,0 +1,66 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-665c2173.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-11b9fab4.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/list.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-dcc5c5d0.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-11b9fab4.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-f782ed28.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-fb00f755.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-11b9fab4.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-1a2472f8.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-11b9fab4.js",
+      "_MathQuill-2e3134e9.js"
+    ]
+  },
+  "src/routes/list.svelte": {
+    "file": "pages/list.svelte-c1f15933.js",
+    "src": "src/routes/list.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-11b9fab4.js",
+      "_MathQuill-2e3134e9.js"
+    ]
+  },
+  "_index-11b9fab4.js": {
+    "file": "chunks/index-11b9fab4.js"
+  },
+  "_MathQuill-2e3134e9.js": {
+    "file": "chunks/MathQuill-2e3134e9.js",
+    "imports": [
+      "_index-11b9fab4.js"
+    ]
+  }
+}
