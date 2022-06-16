@@ -29,6 +29,7 @@
   export let latex: string;
   /** If the element shouldn't have a border / outline. Useful if you're wrapping this input. */
   export let noBorderOutline = false;
+  export let focused = autofocus;
   let clazz = "";
 
   export { clazz as class }
@@ -55,6 +56,13 @@
 
     mathField = MQ.MathField(spanElement, {
       ...processedConfig,
+      substituteTextarea() {
+        const element = document.createElement("textarea")
+        element.addEventListener("focus", () => focused = true)
+        element.addEventListener("blur", () => focused = false)
+        element.setAttribute("autocorrect", "false")
+        return element
+      },
       handlers: {
         edit() {
           

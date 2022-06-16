@@ -5,6 +5,7 @@
   let autoCommands = "pi theta sqrt sum"
   let autoOperatorNames = "sin cos tan arcsin arccos arctan"
   let noBorderOutline = false;
+  let focused = false;
 </script>
 
 <div class="p-8 w-full h-full">
@@ -12,11 +13,12 @@
 
   <p class="mb-4"><span class="rounded-lg font-mono bg-gray-200 p-2">npm i -D svelte-mathquill</span></p>
 
-  <MathQuill config={({ autoCommands, autoOperatorNames })} {noBorderOutline} bind:latex={latex}/><br/>
+  <MathQuill bind:focused={focused} config={({ autoCommands, autoOperatorNames })} {noBorderOutline} bind:latex={latex}/><br/>
 
   Auto Commands: <input placeholder="Auto Commands" bind:value={autoCommands}><br/>
   Auto Operator Names: <input placeholder="Auto Operator Names" bind:value={autoOperatorNames}><br/>
   No outline / border: <input type="checkbox" bind:checked={noBorderOutline}><br/>
+  Is focused: {focused}<br/>
   Static: <MathQuillStatic {latex}></MathQuillStatic><br/>
   Latex: <input placeholder="Result (editable) Latex" bind:value={latex}/>
   <p class="py-4">Code: <span class="font-mono rounded-lg bg-gray-200 p-2">{`<MathQuill config={({ autoCommands, autoOperatorNames })} bind:latex={latex}/><br/>`}</span></p>
