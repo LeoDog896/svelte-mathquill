@@ -6,7 +6,7 @@ A wrapper around MathQuill, a very intuitive math typing editor
 
 ## Usage
 
-MathQuill is legacy, so using it can be tricky -- this library solves _some_ issues but not all:
+MathQuill is legacy, so using it can be tricky -- by wrapping around the CDN scripts, we can make it easier to use.
 
 Add this to your `__layout.svelte` or any wrapper file where you use MathQuill:
 
