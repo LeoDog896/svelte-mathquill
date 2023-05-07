@@ -8,14 +8,13 @@
 	let focused = false;
 </script>
 
-<div class="p-8 w-full h-full">
-	<h1 class="my-6 text-3xl p-3 border-b border-black border-dashed">
-		svelte-mathquill <span class="text-xl text-gray-600">mathquill wrapper for svelte</span>
+<main>
+	<h1>
+		svelte-mathquill <span>mathquill wrapper for svelte</span><br/>
+		<span><a href="https://github.com/LeoDog896/svelte-mathquill">github</a> | <a href="https://www.npmjs.com/package/svelte-mathquill">npm</a></span>
 	</h1>
 
-	<p class="mb-4">
-		<span class="rounded-lg font-mono bg-gray-200 p-2">npm i -D svelte-mathquill</span>
-	</p>
+	<code>npm i -D svelte-mathquill</code><br />
 
 	<MathQuill
 		bind:focused
@@ -32,8 +31,45 @@
 	Static: <MathQuillStatic {latex} /><br />
 	Latex: <input placeholder="Result (editable) Latex" bind:value={latex} />
 	<p class="py-4">
-		Code: <span class="font-mono rounded-lg bg-gray-200 p-2"
-			>{`<MathQuill config={({ autoCommands, autoOperatorNames })} bind:latex={latex}/><br/>`}</span
+		Code: <code
+			>{`<MathQuill config={({ autoCommands, autoOperatorNames })} bind:latex={latex}/><br/>`}</code
 		>
 	</p>
-</div>
+</main>
+
+<style>
+	/* conver thte tailwind classes to css */
+
+	main {
+		padding: 2rem;
+		width: 100%;
+		height: 100%;
+	}
+
+	h1 {
+		font-family: 'Inter', sans-serif;
+		margin-top: 4rem;
+		padding: 1rem;
+		width: calc(100% - (4rem + 1rem) * 2);
+		border-bottom: 1px dotted #000;
+	}
+
+	h1 span {
+		font-size: 1rem;
+		color: #666;
+	}
+
+	code {
+		background: #eee;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+
+	a {
+		color: rgb(21, 98, 198);
+		text-decoration: none;
+		border-bottom: 1px dotted #000;
+	}
+</style>
