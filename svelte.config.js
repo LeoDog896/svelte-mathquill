@@ -13,12 +13,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-    prerender: {
-      default: true
-    },
-    paths: {
-      base: "/svelte-mathquill"
-    }
+		paths: {
+			base: '/svelte-mathquill'
+		}
 	}
 };
 
