@@ -2,17 +2,19 @@
 <html lang="en" class="m-0 p-0">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/svelte-mathquill/favicon.png" />
+		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Svelte Mathquill</title>
-		<meta name="description" content="A svelte wrapper for the math input library, MathQuill.">
-		<meta http-equiv="content-security-policy" content=""><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" data-svelte="svelte-jvg66f"></script><script src="https://unpkg.com/mathquill@0.10.1-a/build/mathquill.min.js" data-svelte="svelte-jvg66f"></script><link rel="stylesheet" href="https://unpkg.com/mathquill@0.10.1-a/build/mathquill.css" data-svelte="svelte-jvg66f">
-	<link rel="stylesheet" href="/svelte-mathquill/_app/immutable/assets/pages/__layout.svelte-f782ed28.css">
-	<link rel="modulepreload" href="/svelte-mathquill/_app/immutable/start-3949e993.js">
-	<link rel="modulepreload" href="/svelte-mathquill/_app/immutable/chunks/index-11b9fab4.js">
-	<link rel="modulepreload" href="/svelte-mathquill/_app/immutable/pages/__layout.svelte-dcc5c5d0.js">
-	<link rel="modulepreload" href="/svelte-mathquill/_app/immutable/pages/list.svelte-82eabb98.js">
-	<link rel="modulepreload" href="/svelte-mathquill/_app/immutable/chunks/MathQuill-755feaf1.js">
+		<meta name="description" content="A svelte wrapper for the math input library, MathQuill." />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/0.4035856a.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.52a154f7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.a9d806a6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.1bd3959c.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.5f4fe4f4.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.81214c4b.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/3.f32153d9.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/MathQuill.f5dbaa15.js"><!-- HEAD_svelte-19qrpst_START --><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="https://unpkg.com/mathquill@0.10.1-a/build/mathquill.min.js"></script><link rel="stylesheet" href="https://unpkg.com/mathquill@0.10.1-a/build/mathquill.css"><!-- HEAD_svelte-19qrpst_END -->
 	</head>
 	<body class="m-0 p-0 w-screen h-screen overflow-x-hidden">
 		<div>
@@ -20,26 +22,35 @@
 
 
 <div class="p-8"><div class="mb-2"><span class="" style=""></span>
-    </div></div>
+		</div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1g2tt58">
-		import { start } from "/svelte-mathquill/_app/immutable/start-3949e993.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1g2tt58"]').parentNode,
-			paths: {"base":"/svelte-mathquill","assets":"/svelte-mathquill"},
-			session: {},
-			route: true,
-			spa: false,
-			trailing_slash: "never",
-			hydrate: {
-				status: 200,
-				error: null,
-				nodes: [0, 3],
-				params: {},
-				routeId: "list"
-			}
-		});
-	</script></div>
+			
+			<script>
+				{
+					__sveltekit_1r1opdj = {
+						assets: "/svelte-mathquill",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.52a154f7.js"),
+						import("./_app/immutable/entry/app.5f4fe4f4.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>
