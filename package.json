@@ -42,8 +42,5 @@
 		"typescript": "^4.7.3",
 		"vite": "^4.3.5"
 	},
-	"type": "module",
-	"dependencies": {
-		"mathquill": "^0.10.1-a"
-	}
+	"type": "module"
 }
