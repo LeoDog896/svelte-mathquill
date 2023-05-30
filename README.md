@@ -8,7 +8,7 @@ A wrapper around MathQuill, a very intuitive math typing editor
 
 MathQuill is legacy, so using it can be tricky -- by wrapping around the CDN scripts, we can make it easier to use.
 
-Add this to your `__layout.svelte` or any wrapper file where you use MathQuill:
+Add this to your `+layout.svelte` or any wrapper file where you use MathQuill:
 
 ```html
 <script>
