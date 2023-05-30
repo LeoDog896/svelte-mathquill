@@ -1,4 +1,4 @@
-# svelte-mathquill
+# [svelte-mathquill](https://leodog896.github.io/svelte-mathquill)
 
 A wrapper around MathQuill, a very intuitive math typing editor
 
