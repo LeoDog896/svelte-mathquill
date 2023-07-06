@@ -41,6 +41,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@fontsource-variable/inter": "^5.0.4",
 		"@sveltejs/adapter-static": "2.0.2",
 		"@sveltejs/kit": "next",
 		"@sveltejs/package": "^2.0.2",

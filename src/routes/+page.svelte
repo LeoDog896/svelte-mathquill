@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { MathQuill, MathQuillStatic } from '$lib/index.ts';
+	import '@fontsource-variable/inter';
 
 	let latex = 'x + \\sqrt{5}';
 	let autoCommands = 'pi theta sqrt sum';
@@ -38,11 +39,8 @@
 </main>
 
 <style>
-	/* conver thte tailwind classes to css */
-
 	main {
 		padding: 2rem;
-		width: 100%;
 		height: 100%;
 	}
 
