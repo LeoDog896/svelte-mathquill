@@ -41,6 +41,7 @@
 	export let noBorderOutline = false;
 	export let focused = autofocus;
 	let clazz = '';
+	export let style = '';
 
 	export { clazz as class };
 
@@ -115,6 +116,6 @@
 
 <span
 	class={clazz}
-	style={noBorderOutline ? 'border: none; outline: none; box-shadow: none;' : ''}
+	style={(noBorderOutline ? 'border: none; outline: none; box-shadow: none;' : '') + style}
 	bind:this={spanElement}
 />

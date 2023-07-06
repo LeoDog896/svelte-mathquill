@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { MathQuill, MathQuillStatic } from '$lib/index.ts';
 	import '@fontsource-variable/inter';
+	import { tick } from 'svelte';
 
 	let latex = 'x + \\sqrt{5}';
 	let autoCommands = 'pi theta sqrt sum';
@@ -18,6 +19,7 @@
 	<code>npm i -D svelte-mathquill</code><br />
 
 	<MathQuill
+		style="margin: 10px 0;"
 		bind:focused
 		config={{ autoCommands, autoOperatorNames }}
 		{noBorderOutline}
@@ -27,7 +29,7 @@
 	Auto Commands: <input placeholder="Auto Commands" bind:value={autoCommands} /><br />
 	Auto Operator Names: <input placeholder="Auto Operator Names" bind:value={autoOperatorNames} /><br
 	/>
-	No outline / border: <input type="checkbox" bind:checked={noBorderOutline} /><br />
+	No outline / border (these are common css controls): <input type="checkbox" bind:checked={noBorderOutline} /><br />
 	Is focused: {focused}<br />
 	Static: <MathQuillStatic {latex} /><br />
 	Latex: <input placeholder="Result (editable) Latex" bind:value={latex} />
@@ -42,10 +44,10 @@
 	main {
 		padding: 2rem;
 		height: 100%;
+		font-family: 'Inter Variable', sans-serif;
 	}
 
 	h1 {
-		font-family: 'Inter', sans-serif;
 		margin-top: 4rem;
 		padding: 1rem;
 		width: calc(100% - (4rem + 1rem) * 2);
