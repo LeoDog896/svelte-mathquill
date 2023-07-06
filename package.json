@@ -1,7 +1,7 @@
 {
 	"name": "svelte-mathquill",
 	"description": "A svelte wrapper for MathQuill",
-	"version": "0.5.0",
+	"version": "0.6.0",
 	"author": {
 		"name": "Tristan F.",
 		"email": "leodog896@gmail.com"
