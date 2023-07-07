@@ -6,7 +6,9 @@ A wrapper around MathQuill, a very intuitive math typing editor
 
 ## Usage
 
-MathQuill is legacy, so using it can be tricky -- by wrapping around the CDN scripts, we can make it easier to use.
+MathQuill uses legacy bundling, so using it can be tricky -- by wrapping around the CDN scripts, we can make it easier to use. The source code for the setup injection is [here](https://github.com/LeoDog896/svelte-mathquill/blob/main/src/lib/MathQuillSetup.svelte), in case you want to modify the imported scripts yourself or get the URLs for a service worker implementation.
+
+In general, it depends on jQuery.js, and both mathquill.js and mathquill.css
 
 Add this to your `+layout.svelte` or any wrapper file where you use MathQuill:
 
