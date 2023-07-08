@@ -1,5 +1,8 @@
 # [svelte-mathquill](https://leodog896.github.io/svelte-mathquill)
 
+[![npm](https://img.shields.io/npm/dw/svelte-mathquill)](https://npmjs.com/package/svelte-mathquill)
+
+
 A wrapper around MathQuill, a very intuitive math typing editor
 
 `npm i -D svelte-mathquill`
