@@ -36,7 +36,7 @@
 
 	let spanElement: HTMLSpanElement;
 	export let autofocus = false;
-	export let latex: string;
+	export let latex = "";
 	/** If the element shouldn't have a border / outline. Useful if you're wrapping this input. */
 	export let noBorderOutline = false;
 	export let focused = autofocus;
@@ -47,13 +47,16 @@
 
 	export let config: Partial<MathQuillConfig> = {};
 	let mathField: any | undefined;
-
+	
+	/** Returns the current instance of MathQuill. Useful for using bindings that haven't been implemented yet. */
+	export const mathQuillInstance = () => mathField;
 	export const focus = () => mathField?.focus();
 	export const blur = () => mathField?.blur();
 	export const reflow = () => mathField?.reflow();
 	export const select = () => mathField?.select();
 	export const clearSelection = () => mathField?.clearSelection();
 	export const keystroke = (text: string) => mathField?.keystroke(text);
+	export const cmd = (text: string) => mathField?.cmd(text);
 	export const typedText = (text: string) => mathField?.typedText(text);
 
 	$: processedConfig = Object.fromEntries(Object.entries(config).filter(([_, value]) => value));

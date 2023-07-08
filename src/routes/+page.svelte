@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { MathQuill, MathQuillStatic } from '$lib/index.ts';
 	import '@fontsource-variable/inter';
-	import { tick } from 'svelte';
 
 	let latex = 'x + \\sqrt{5}';
 	let autoCommands = 'pi theta sqrt sum';
@@ -38,6 +37,12 @@
 			>{`<MathQuill config={({ autoCommands, autoOperatorNames })} bind:latex={latex}/><br/>`}</code
 		>
 	</p>
+
+	<h2>Examples</h2>
+
+	<ul>
+		<li><a href="list">list</a></li>
+	</ul>
 </main>
 
 <style>
