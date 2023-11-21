@@ -1,6 +1,15 @@
 <script lang="ts">
 	import { MathQuill, MathQuillStatic } from '$lib/index.ts';
 	import '@fontsource-variable/inter';
+	import Highlight from "svelte-highlight";
+  	import xml from "svelte-highlight/languages/xml";
+	import "svelte-highlight/styles/github.css";
+
+	const code = `<script lang="ts">
+	import { MathQuillSetup, MathQuill } from "svelte-mathquill";
+<\/script>
+<MathQuillSetup \/>
+<MathQuill config={({ autoCommands, autoOperatorNames })} bind:latex={latex}\/>`
 
 	let latex = 'x + \\sqrt{5}';
 	let autoCommands = 'pi theta sqrt sum';
@@ -11,11 +20,13 @@
 
 <main>
 	<h1>
-		svelte-mathquill <span>mathquill wrapper for svelte</span><br/>
+		svelte-mathquill <span>mathquill for svelte</span><br/>
 		<span><a href="https://github.com/LeoDog896/svelte-mathquill">github</a> | <a href="https://www.npmjs.com/package/svelte-mathquill">npm</a></span>
 	</h1>
 
 	<code>npm i -D svelte-mathquill</code><br />
+
+	<h2>Playground</h2>
 
 	<MathQuill
 		style="margin: 10px 0;"
@@ -25,18 +36,21 @@
 		bind:latex
 	/><br />
 
-	Auto Commands: <input placeholder="Auto Commands" bind:value={autoCommands} /><br />
-	Auto Operator Names: <input placeholder="Auto Operator Names" bind:value={autoOperatorNames} /><br
-	/>
-	No outline / border (these are common css controls): <input type="checkbox" bind:checked={noBorderOutline} /><br />
-	Is focused: {focused}<br />
-	Static: <MathQuillStatic {latex} /><br />
-	Latex: <input placeholder="Result (editable) Latex" bind:value={latex} />
-	<p class="py-4">
-		Code: <code
-			>{`<MathQuill config={({ autoCommands, autoOperatorNames })} bind:latex={latex}/><br/>`}</code
-		>
+	<p>Auto Commands: <input placeholder="Auto Commands" bind:value={autoCommands} /></p>
+	<p>Auto Operator Names: <input placeholder="Auto Operator Names" bind:value={autoOperatorNames} /></p>
+	<p>No outline / border: <input type="checkbox" bind:checked={noBorderOutline} /></p>
+	<p>Is focused: {focused}</p>
+	<p>Static: <MathQuillStatic {latex} /></p>
+	<p>Latex: <input placeholder="Result (editable) Latex" bind:value={latex} /></p>
+
+	<h2>Code</h2>
+
+	<p>
+		Since MathQuill is (very) legacy, <code>MathQuillSetup</code> imports all resources
+		from a CDN, injecting jQuery, and MathQuill's CSS and JS resources.
 	</p>
+
+	<Highlight language={xml} {code} />
 
 	<h2>Examples</h2>
 
@@ -53,8 +67,8 @@
 	}
 
 	h1 {
-		margin-top: 4rem;
 		padding: 1rem;
+		margin-top: 0;
 		width: calc(100% - (4rem + 1rem) * 2);
 		border-bottom: 1px dotted #000;
 	}
