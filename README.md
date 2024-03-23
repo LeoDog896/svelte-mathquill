@@ -1,17 +1,12 @@
 # [svelte-mathquill](https://leodog896.github.io/svelte-mathquill)
 
-[![npm](https://img.shields.io/npm/dw/svelte-mathquill)](https://npmjs.com/package/svelte-mathquill)
-
+[![npm](https://img.shields.io/npm/v/svelte-mathquill)](https://npmjs.com/package/svelte-mathquill)
 
 A wrapper around MathQuill, a very intuitive math typing editor
 
 `npm i -D svelte-mathquill`
 
 ## Usage
-
-MathQuill uses legacy bundling, so using it can be tricky -- by wrapping around the CDN scripts, we can make it easier to use. The source code for the setup injection is [here](https://github.com/LeoDog896/svelte-mathquill/blob/main/src/lib/MathQuillSetup.svelte), in case you want to modify the imported scripts yourself or get the URLs for a service worker implementation.
-
-In general, it depends on jQuery.js, and both mathquill.js and mathquill.css
 
 Add this to your `+layout.svelte` or any wrapper file where you use MathQuill:
 
@@ -23,7 +18,8 @@ Add this to your `+layout.svelte` or any wrapper file where you use MathQuill:
 <MathQuillSetup />
 ```
 
-This imports the necessary files globally.
+This injects jQuery and MathQuill (+ styles) into the head of the document,
+to begin using MathQuill in your components.
 
 Simple example:
 
@@ -39,7 +35,7 @@ Simple example:
 <input bind:value="{latex}" />
 ```
 
-## Documetation
+## Documentation
 
 ### Properties
 
