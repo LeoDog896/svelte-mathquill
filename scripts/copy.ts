@@ -9,12 +9,6 @@ interface DownloadFile {
 
 const files: DownloadFile[] = [
 	{
-		url: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js',
-		name: 'jquery.min.js',
-		integrity:
-			'h9kKZlwV1xrIcr2LwAPZhjlkx+x62mNwuQK5PAu9d3D+JXMNlGx8akZbqpXvp0vA54rz+DrqYVrzUGDMhwKmwQ=='
-	},
-	{
 		url: 'https://unpkg.com/mathquill@0.10.1-a/build/mathquill.min.js',
 		name: 'mathquill.min.js.txt',
 		integrity:
