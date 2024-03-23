@@ -45,11 +45,6 @@
 
 	<h2>Code</h2>
 
-	<p>
-		Since MathQuill is (very) legacy, <code>MathQuillSetup</code> imports all resources
-		from a CDN, injecting jQuery, and MathQuill's CSS and JS resources.
-	</p>
-
 	<Highlight language={xml} {code} />
 
 	<h2>Examples</h2>
