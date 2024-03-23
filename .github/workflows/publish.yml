@@ -30,6 +30,8 @@ jobs:
           version: 8
       - name: Install dependencies
         run: pnpm install
+      - name: Copy assets
+        run: pnpm run copy
       - name: Build page
         run: pnpm run build
       - name: Upload built project output

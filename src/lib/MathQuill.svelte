@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { createEventDispatcher } from 'svelte';
+	import { jQueryLoaded, mathQuillLoaded } from './MathQuillSetup.svelte';
 
 	type HorizontalDirection = 'L' | 'R';
 
@@ -64,7 +65,9 @@
 	$: if (mathField && mathField.latex() !== latex) mathField.latex(latex);
 	$: if (processedConfig && mathField) mathField.config(config);
 
-	onMount(() => {
+	onMount(async () => {
+		await jQueryLoaded.waitFor(true);
+		await mathQuillLoaded.waitFor(true);
 		const MQ = ((globalThis as any).MathQuill as any).getInterface(2);
 
 		const parseDirection = (dir: any): HorizontalDirection => (dir == MQ.L ? 'L' : 'R');
